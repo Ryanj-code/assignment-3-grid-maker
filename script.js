@@ -29,7 +29,9 @@ function addC() {
 
 // Remove a row
 function removeR() {
-    alert("Clicked Remove Row"); // Replace this line with your code.
+    numRows--;
+    let table = document.getElementById("grid");
+    table.deleteRow(numRows);
 }
 
 // Remove a column
