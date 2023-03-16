@@ -19,7 +19,12 @@ function addR() {
 
 // Add a column
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+    numCols++;
+    let table = document.getElementById("grid");
+    
+    for(let i = 0; i < numRows; i++) {
+        table.rows[i].insertCell(numRows);
+    }
 }
 
 // Remove a row
