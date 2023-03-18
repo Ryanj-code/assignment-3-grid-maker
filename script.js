@@ -41,7 +41,6 @@ function selectColor(){
 // Fill all uncolored cells
 function fillU(){
     let cell = document.querySelectorAll("td");
-    console.log(cell);
     
     for(let i = 0; i < cell.length; i++) {
         if(!cell[i].style.background) cell[i].style.background = colorSelected;   
@@ -50,10 +49,18 @@ function fillU(){
 
 // Fill all cells
 function fillAll(){
-    alert("Clicked Fill All"); // Replace this line with your code.
+    let cell = document.querySelectorAll("td");
+    
+    for(let i = 0; i < cell.length; i++) {
+        cell[i].style.background = colorSelected;   
+    }
 }
 
 // Clear all cells
 function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
+    let cell = document.querySelectorAll("td");
+    
+    for(let i = 0; i < cell.length; i++) {
+        cell[i].style.background = "";   
+    }
 }
