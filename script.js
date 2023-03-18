@@ -11,6 +11,9 @@ function addR() {
     
     for(let i = 0; i < numCols; i++) {
         let cell = document.createElement("td");
+        cell.onclick = function () {
+            cell.style.background = colorSelected;
+        }
         row.appendChild(cell);
     }
     
@@ -25,7 +28,10 @@ function addC() {
     let table = document.getElementById("grid");
     
     for(let i = 0; i < numRows; i++) {
-        table.rows[i].insertCell(numCols-1);
+        cell = table.rows[i].insertCell(numCols-1);
+        cell.onclick = function () {
+            cell.style.background = colorSelected;
+        }
     }
 
     // console.log(numRows, " ", numCols);
