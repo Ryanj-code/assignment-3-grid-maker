@@ -16,7 +16,7 @@ function addR() {
     
     table.appendChild(row);
 
-    console.log(numRows, " ", numCols);
+    // console.log(numRows, " ", numCols);
 }
 
 // Add a column
@@ -28,7 +28,7 @@ function addC() {
         table.rows[i].insertCell(numCols-1);
     }
 
-    console.log(numRows, " ", numCols);
+    // console.log(numRows, " ", numCols);
 }
 
 // Remove a row
@@ -37,7 +37,7 @@ function removeR() {
     let table = document.getElementById("grid");
     table.deleteRow(numRows);
 
-    console.log(numRows, " ", numCols);
+    // console.log(numRows, " ", numCols);
 }
 
 // Remove a column
@@ -49,7 +49,7 @@ function removeC() {
         table.rows[i].deleteCell(numCols);
     }
     
-    console.log(numRows, " ", numCols);
+    // console.log(numRows, " ", numCols);
 }
 
 // Set global variable for selected color
