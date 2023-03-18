@@ -27,11 +27,25 @@ function removeC() {
 function selectColor(){
     colorSelected = document.getElementById("selectedColorId").value;
     console.log(colorSelected);
+
+    let cell = document.querySelectorAll("td");
+    console.log(cell);
+    
+    for(let i = 0; i < cell.length; i++) {
+        cell[i].onclick = function () {
+            cell[i].style.background = colorSelected;
+        }    
+    }
 }
 
 // Fill all uncolored cells
 function fillU(){
-    alert("Clicked Fill All Uncolored"); // Replace this line with your code.
+    let cell = document.querySelectorAll("td");
+    console.log(cell);
+    
+    for(let i = 0; i < cell.length; i++) {
+        if(!cell[i].style.background) cell[i].style.background = colorSelected;   
+    }
 }
 
 // Fill all cells
